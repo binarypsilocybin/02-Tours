@@ -9,7 +9,7 @@ function App() {
   const [tours, setTours] = useState([]);
 
   const removeTour = (id) => {
-    const newTours = tour.filter((tour) => tour.id !== id);
+    const newTours = tours.filter((tour) => tour.id !== id);
     setTours(newTours);
   };
 
@@ -40,7 +40,9 @@ function App() {
       <main>
         <div className="title">
           <h2>no tours left</h2>
-          <button onClick={fetchTours}>Refresh</button>
+          <button className="btn" onClick={fetchTours}>
+            Refresh
+          </button>
         </div>
       </main>
     );
